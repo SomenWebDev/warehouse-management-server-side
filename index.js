@@ -21,12 +21,12 @@ async function run() {
       .db("inventoryShop")
       .collection("inventory");
     
-    // app.get("/inventory", async (req, res) => {
-    //   const query = {};
-    //   const cursor = inventoryCollection.find(query);
-    //   const inventories = await cursor.toArray();
-    //   res.send(inventories);
-    // });
+    app.get("/inventory", async (req, res) => {
+      const query = {};
+      const cursor = inventoryCollection.find(query);
+      const inventories = await cursor.toArray();
+      res.send(inventories);
+    });
 
     // app.get("/inventory/:id", async (req, res) => {
     //   const id = req.params.id;

@@ -20,6 +20,8 @@ router
 
 router
   .route("/:id")
-  .get(viewCount, limiter, inventoryControllers.getInventoryDetail);
+  .get(viewCount, limiter, inventoryControllers.getInventoryDetail)
+  .patch(inventoryControllers.updateInventory)
+  .delete(inventoryControllers.deleteInventory);
 
 module.exports = router;
